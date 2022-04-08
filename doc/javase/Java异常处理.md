@@ -351,6 +351,8 @@ throw的话，那就是你把那个倾向变成真实的了。
 
 两者都是消极处理异常的方式（这里的消极并不是说这种方式不好），只是抛出或者可能抛出异常，但是不会由函数去处理异常，真正的处理异常由函数的上层调用处理。
 
+![image](images/202204080003.png)
+
 ### finally关键字
 
 finally 关键字用来创建在 try 代码块后面执行的代码块。
@@ -686,3 +688,35 @@ InsufficientFundsException
 
 ![image](images/202204080002.png)
 
+### 异常堆栈
+
+当异常抛出后，我们可以通过异常堆栈追踪程序的运行轨迹，以便我们更好的 `DEBUG` 。
+
+```
+public class Demo4 {
+    public static void method1() {
+        method2();
+    }
+
+    public static void method2() {
+        throw new NullPointerException();
+    }
+
+    public static void main(String[] args) {
+        try{
+            method1();
+        } catch (Exception e) {
+            // 打印堆栈轨迹
+            e.printStackTrace();
+        }
+    }
+}
+
+打印结果：
+java.lang.NullPointerException
+	at Demo4.method2(Demo4.java:10)
+	at Demo4.method1(Demo4.java:6)
+	at Demo4.main(Demo4.java:15)
+```
+
+通过上面的异常堆栈轨迹，在对比我们方法的调用过程，可以得出异常信息中首先打印的是距离抛出异常最近的语句，接着是调用该方法的方法，一直到最开始被调用的方法。 **从下往上看** ，就可以得出程序运行的轨迹。
