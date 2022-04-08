@@ -12,5 +12,15 @@
 
 [Java常用类](Java常用类.md)
 
+[Java内部类](Java内部类.md)
+
+[Java接口](Java接口.md)
+
+[Java枚举类](Java枚举类.md)
+
 [Java异常处理](Java异常处理.md)
+
+[Java集合](Java集合.md)
+
+[Java泛型](Java泛型.md)
 
