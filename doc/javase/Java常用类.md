@@ -10,7 +10,7 @@
 
 #### 包装类的继承关系
 
-![WrapperClass](C:\workspace\git\Knowledge\doc\javase\images\OOP_WrapperClass.png)
+![image](images/202204060007.png)
 
 #### 自动装箱与拆箱
 
@@ -143,7 +143,7 @@ private static class IntegerCache {
 
 #### 包装类的基本操作
 
-![img](C:\workspace\git\Knowledge\doc\javase\images\1504650-20190511210543886-182915236.png)
+![image](images/202204060006.png)
 
 #### 包装类的运算
 
@@ -344,7 +344,7 @@ Boolean flag3 = true;
 
 运行结果：
 
-![img](C:\workspace\git\Knowledge\doc\javase\images\20190416220631257.png)
+![image](images/202204060005.png)
 
 这里只是简单演示空指针异常。平时使用时需要注意这一点，比如当Boolean的对象作为形参时，在方法执行体的头部需要做下null检测。
 
@@ -393,7 +393,7 @@ System.out.println(max +"	"+ Integer.MAX_VALUE); //2147483647      2147483647
 
 `Object` 类是 `Java` 中所有类的始祖， 在 `Java` 中每个类都是由它扩展而来的，子类可以使用 `Object` 的所有方法。但是并不需要这样写： `public class Student extends Object` 
 
-![img](C:\workspace\git\Knowledge\doc\javase\images\classes-object.gif)
+![image](images/202204060004.png)
 
 Object 类位于 java.lang 包中，编译时会自动导入，我们创建一个类时，如果没有明确继承一个父类，那么它就会自动继承 Object，成为 Object 的子类。
 
@@ -1520,7 +1520,7 @@ String s4 = new String("Demo");   // String 对象创建
 String s5 = new String("Demo");   // String 对象创建
 ```
 
-![202204070001](C:\workspace\git\Knowledge\doc\javase\images\202204070001.png)
+![image](images/202204070001.png)
 
 String 类有 11 种构造方法，这些方法提供不同的参数来初始化字符串，比如提供一个字符数组参数:
 
@@ -2179,7 +2179,7 @@ fromIndex：开始搜索的索引位置，第一个字符是 0 ，第二个是 1
 str：要搜索的子字符串。
 ```
 
-![img](C:\workspace\git\Knowledge\doc\javase\images\java-indexof-2020-12-01.png)
+![image](images/202204060003.png)
 
 ```
 example1：查找字符串，或字符 Unicode 编码在字符串出现的位置:
@@ -2702,7 +2702,7 @@ result：
 返回值 : is te
 ```
 
-![img](C:\workspace\git\Knowledge\doc\javase\images\java-substring-20201208.png)
+![image](images/202204060002.png)
 
 ##### toCharArray()
 
@@ -2913,7 +2913,7 @@ myStr3 是否为空：false
 
 和 String 类不同的是，StringBuffer 和 StringBuilder 类的对象能够被多次的修改，并且不产生新的未使用对象。
 
-![img](C:\workspace\git\Knowledge\doc\javase\images\java-string-20201208.png)
+![image](images/202204060001.png)
 
 在使用 StringBuffer 类时，每次都会对 StringBuffer 对象本身进行操作，而不是生成新的对象，所以如果需要对字符串进行修改推荐使用 StringBuffer。
 
